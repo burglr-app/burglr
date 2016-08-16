@@ -26,21 +26,13 @@
     }
   },
   "formation": {
-    "webpack": {
-      "quantity": 1,
-      "size": "Standard-1X"
-    },
     "rails": {
       "quantity": 1,
-      "size": "Standard-1X"
+      "size": "free"
     },
     "worker": {
       "quantity": 1,
-      "size": "Standard-1X"
-    },
-    "web": {
-      "quantity": 1,
-      "size": "Standard-1X"
+      "size": "free"
     }
   },
   "addons": [
