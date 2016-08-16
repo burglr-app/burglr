@@ -10,10 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160816153548) do
+ActiveRecord::Schema.define(version: 20160816160637) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
   enable_extension "hstore"
+
+  create_table "recipes", force: :cascade do |t|
+    t.string   "title"
+    t.hstore   "ingredients", default: {}, null: false
+    t.hstore   "steps",       default: {}, null: false
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
+  end
 
 end
