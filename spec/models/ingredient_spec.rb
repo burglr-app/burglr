@@ -3,6 +3,8 @@ require 'rails_helper'
 RSpec.describe Ingredient, type: :model do
   let(:ingredient) { build :ingredient }
 
+  it { should belong_to(:recipe) }
+
   it 'is valid with valid attributes' do
     expect(ingredient).to be_valid
   end
