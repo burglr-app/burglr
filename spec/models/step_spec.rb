@@ -3,6 +3,8 @@ require 'rails_helper'
 RSpec.describe Step, type: :model do
   let(:step) { build :step }
 
+  it { should belong_to(:recipe) }
+
   it 'is valid with valid attributes' do
     expect(step).to be_valid
   end
