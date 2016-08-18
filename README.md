@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/burglr-app/burglr.svg?branch=master)](https://travis-ci.org/burglr-app/burglr)
 [![Code Climate](https://codeclimate.com/github/burglr-app/burglr/badges/gpa.svg)](https://codeclimate.com/github/burglr-app/burglr)
 [![Test Coverage](https://codeclimate.com/github/burglr-app/burglr/badges/coverage.svg)](https://codeclimate.com/github/burglr-app/burglr/coverage)
 
