@@ -10,18 +10,37 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160816160637) do
+ActiveRecord::Schema.define(version: 20160818050727) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
-  enable_extension "hstore"
+
+  create_table "ingredients", force: :cascade do |t|
+    t.string   "title",      default: "", null: false
+    t.integer  "quantity",   default: 0,  null: false
+    t.string   "type",       default: ""
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
+    t.integer  "recipe_id"
+    t.index ["recipe_id"], name: "index_ingredients_on_recipe_id", using: :btree
+  end
 
   create_table "recipes", force: :cascade do |t|
     t.string   "title"
-    t.hstore   "ingredients", default: {}, null: false
-    t.hstore   "steps",       default: {}, null: false
-    t.datetime "created_at",               null: false
-    t.datetime "updated_at",               null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
+  create_table "steps", force: :cascade do |t|
+    t.string   "title",       default: "", null: false
+    t.integer  "position",    default: 0,  null: false
+    t.string   "description", default: ""
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
+    t.integer  "recipe_id"
+    t.index ["recipe_id"], name: "index_steps_on_recipe_id", using: :btree
+  end
+
+  add_foreign_key "ingredients", "recipes"
+  add_foreign_key "steps", "recipes"
 end

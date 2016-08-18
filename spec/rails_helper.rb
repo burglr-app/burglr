@@ -57,3 +57,16 @@ RSpec.configure do |config|
     DatabaseCleaner.clean
   end
 end
+
+Shoulda::Matchers.configure do |config|
+  config.integrate do |with|
+    # Test framework:
+    with.test_framework :rspec
+
+    # Libraries:
+    with.library :active_record
+    with.library :active_model
+    with.library :action_controller
+    with.library :rails
+  end
+end
