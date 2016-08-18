@@ -1,3 +1,6 @@
+[![Code Climate](https://codeclimate.com/github/burglr-app/burglr/badges/gpa.svg)](https://codeclimate.com/github/burglr-app/burglr)
+[![Test Coverage](https://codeclimate.com/github/burglr-app/burglr/badges/coverage.svg)](https://codeclimate.com/github/burglr-app/burglr/coverage)
+
 # Burglr
 
 ## Getting Started
