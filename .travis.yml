@@ -10,3 +10,6 @@ before_script:
   - bundle exec rake db:test:prepare
 script:
   - bundle exec rake health
+addons:
+  code_climate:
+    repo_token: 14c18d2f4d345c1846a7f8ec1d2bcbf161d78fe10a2713bcd922b3d66ade10eb
