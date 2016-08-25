@@ -17,10 +17,6 @@
     <%= f.label :title %>
     <%= f.text_field :title %>
   </div>
-
-  <%= fields_for @recipe.ingredients do |ingredients| %>
-    <%= ingredients.text_field :title %>
-  <% end %>
-
+  
   <%= f.submit %>
 <% end %>
