@@ -37,6 +37,7 @@ group :test do
   gem 'simplecov', require: false
   gem 'poltergeist'
   gem "codeclimate-test-reporter", require: nil
+  gem 'rails-controller-testing'
 end
 
 group :staging, :production do

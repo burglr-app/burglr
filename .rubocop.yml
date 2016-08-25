@@ -18,3 +18,5 @@ SignalException:
   EnforcedStyle: semantic
 Documentation:
   Enabled: false
+Metrics/MethodLength:
+  Max: 20
