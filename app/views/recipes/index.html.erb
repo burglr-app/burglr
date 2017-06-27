@@ -1,0 +1,18 @@
+<% if @recipes.any? %>
+  <table>
+    <tr>
+      <th>Title</th>
+      <th colspan="2"></th>
+    </tr>
+
+    <% @recipes.each do |recipe| %>
+      <tr>
+        <td><%= recipe.title %></td>
+        <td><%= link_to 'Show', recipe_path(recipe) %></td>
+        <td><%= link_to 'Edit', edit_recipe_path(recipe) %></td>
+      </tr>
+    <% end %>
+  </table>
+<% else %>
+  <h2>Without results</h2>
+<% end %>
